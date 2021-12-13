@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
-app.secret_key = 'keep it secret, keep it safe, hush hush!'
+app.secret_key = 'its a secret!'
 
 @app.route('/')
 def counter():
