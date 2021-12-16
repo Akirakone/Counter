@@ -30,7 +30,8 @@ def plustwo():
 
 @app.route('/youradd', methods=['POST'])
 def youradd():
-    session['counter'] += int(['youadd']) 
+    print(request.form)
+    session['counter'] += int(request.form["add_number"]) - 1
     return redirect("/")
 
 if __name__ == "__main__":
