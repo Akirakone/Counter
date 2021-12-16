@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, session
+
+from flask import Flask, render_template, request, redirect, session, url_for
 app = Flask(__name__)
 app.secret_key = 'its a secret!'
 
@@ -22,14 +23,14 @@ def reset():
     return redirect("/")
 
 @app.route('/plusTwo')
-def plusTwo():
+def plustwo():
     if 'counter' in session:
         session['counter'] += 1
     return redirect("/")
 
-@app.route('/yourNumber', methods=['POST'])
-def yourNumber():
-    session['counter'] += int(request.form['yourNumber']) - 1
+@app.route('/youradd', methods=['POST'])
+def youradd():
+    session['counter'] += int(request.form['youradd']) - 1
     return redirect("/")
 
 if __name__ == "__main__":
