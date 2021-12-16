@@ -8,7 +8,7 @@ def counter():
         session['counter'] += 1
     else:
         session['counter'] = 0
-    return render_template("index.html")
+    return render_template("counter.html")
 
 @app.route('/destroy')
 def destroy():
