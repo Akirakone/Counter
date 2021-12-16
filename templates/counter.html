@@ -29,13 +29,13 @@
     <h1>Counter</h1>
     <h2>{{session["counter"]}} Visits!</h2>
     <div class="button-contain">
-        <form action="{{ url_for('plustwo') }}">
+        <form action="/plustwo">
             <button type="submit" class="button-style green">Add two Visit</button>
         </form>
         <form action="{{ url_for('destroy') }}">
             <button type="submit" class="button-style red">Reset</button>
         </form>
-        <form action="{{ url_for('youradd') }}">
+        <form action="{{ url_for('youradd') }}" method="post">
             <input type="number" name="add_number">
             <button type="submit" class="button-style black">Add</button>
         </form>
