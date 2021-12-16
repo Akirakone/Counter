@@ -22,7 +22,7 @@ def reset():
         session['counter'] = 0
     return redirect("/")
 
-@app.route('/plusTwo')
+@app.route('/plustwo')
 def plustwo():
     if 'counter' in session:
         session['counter'] += 1
@@ -30,7 +30,7 @@ def plustwo():
 
 @app.route('/youradd', methods=['POST'])
 def youradd():
-    session['counter'] += int(request.form['youradd']) - 1
+    session['counter'] += int(['youadd']) 
     return redirect("/")
 
 if __name__ == "__main__":
